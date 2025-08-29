@@ -1,23 +1,28 @@
-<p>table-list works!</p>
 <div class="table-container">
     <table datatable>
         <thead>
             <tr>
                 <th>ID</th>
+                <th>OrderDate</th>
+
                 <th>Name</th>
+                <th>ProductLine</th>
                 <th>Preis</th>
             </tr>
         </thead>
         <tbody id="tableBody">
-             @for(item of tableData; track item){
-        <tr>
-          <td>{{item.id}}</td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.preis }}</td>
-     
-         
-        </tr>
-        }
+            @for(item of tableData1; track item){
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{ item.OrderDate }}</td>
+                <td>{{ item.EnglishProductName }}</td>
+                <td>{{ item.ProductLine }}</td>
+                <td>{{ item.UnitPrice }}</td>
+
+
+
+            </tr>
+            }
 
         </tbody>
     </table>

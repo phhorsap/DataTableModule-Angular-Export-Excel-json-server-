@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DataTablesModule } from 'angular-datatables';
 import * as XLSX from 'xlsx';
 import { Config } from 'datatables.net';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -11,14 +12,19 @@ import { Config } from 'datatables.net';
   styleUrl: './table-list.scss'
 })
 export class TableList implements OnInit {
+  http = inject(HttpClient);
 
-  tableData: any[] = [];
+  tableData: any= [];
+  tableData1: any[] = [];
    dtoptions: Config = {};
 
   
 
   ngOnInit(): void {
-   
+    this.http.get('http://localhost:3000/saleList').subscribe(data => {
+    this.tableData1 = data as any[];
+        console.log('this.datatable 1 ',data);
+    });
     // Beispiel-Daten
     this.tableData = [
       { id: 1, name: 'Produkt A', preis: 10 },

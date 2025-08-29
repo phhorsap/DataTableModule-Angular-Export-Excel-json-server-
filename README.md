@@ -3,7 +3,6 @@ import * as XLSX from 'xlsx';
 import { DataTablesModule } from 'angular-datatables';
 import { Config } from 'datatables.net';
 simply table:
-<img width="1035" height="601" alt="image" src="https://github.com/user-attachments/assets/d0ac5dc5-3c7d-430f-9376-6619c1b41b6a" />
 
 
 setting in angular.json

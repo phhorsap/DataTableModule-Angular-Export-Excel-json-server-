@@ -3,7 +3,8 @@ import * as XLSX from 'xlsx';
 import { DataTablesModule } from 'angular-datatables';
 import { Config } from 'datatables.net';
 simply table:
-![Uploading image.png…]()
+<img width="1042" height="601" alt="image" src="https://github.com/user-attachments/assets/14c2ae68-de67-4a30-8e57-b6fb08b74253" />
+
 
 
 
